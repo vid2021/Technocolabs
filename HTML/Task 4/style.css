@@ -62,14 +62,16 @@ img {
 }
 
 aside {
-	left: 10px;
-	border: 1px solid black;
-	padding: 15px;
-	max-width: 80%;
-	position: relative;
-	border-color: #010e80;
+	float: right;
+        width: 30%;
+        border: 1px solid black;
+        height: auto;
+        padding: 15px;
+        font-size: 18px;
+        position:relative;
+        border-color: #010e80;
 	border-width: 5px;
-	font-size: 18px;
+        right:10px;
 }
 
 footer {
