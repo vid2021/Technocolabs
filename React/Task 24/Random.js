@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Button from "./button";
+constructor(props)
+{
+super(props);
+this.state = { color: [195, 255, 25] };
+this.handleClick = this.handleClick.bind(this);
+}
 class Random extends React.Component {
+ 
   componentDidMount() {
     this.applyColor();
   }
@@ -31,13 +38,18 @@ class Random extends React.Component {
     }
     return random;
   }
+  handleClick(){
 
+   this.setState({color: this.chooseColor()});
+
+}
   render() {
     return (
       <div>
         <h1 className={this.isLight() ? 'white' : 'black'}>
-
+         Your color is formatColor(this.state.color).
         </h1>
+        <Button light={this.isLight()} onClick={this.handleClick}/>
       </div>
     );
   }
